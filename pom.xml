@@ -24,4 +24,12 @@
         </dependency>
 
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Hoversprite Common Share Object</name>
+            <url>https://maven.pkg.github.com/quocbinhngo/hoversprite-common</url>
+        </repository>
+    </distributionManagement>
 </project>
