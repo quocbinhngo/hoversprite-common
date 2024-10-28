@@ -6,6 +6,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 public class User {
+    public static interface IUserDto {
+
+        String getEmail();
+
+        String getPhone();
+
+        RoleType getRole();
+
+        Long getProfileId();
+    }
+
     @Getter
     @Setter
     @NoArgsConstructor
@@ -18,6 +29,13 @@ public class User {
         private RoleType role;
 
         private Long profileId;
+
+        public UserDto(IUserDto userDto) {
+            this.email = userDto.getEmail();
+            this.phone = userDto.getPhone();
+            this.role = userDto.getRole();
+            this.profileId = userDto.getProfileId();
+        }
     }
 
     @Getter
